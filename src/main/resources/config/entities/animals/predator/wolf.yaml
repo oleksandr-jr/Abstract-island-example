@@ -1,0 +1,7 @@
+icon: W
+maxWeight: 50
+maxAmount: 30
+maxSpeed: 3
+maxFood: 8
+stringTargetMatrix:
+  Horse: 10
