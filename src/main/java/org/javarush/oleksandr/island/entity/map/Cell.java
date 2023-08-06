@@ -19,12 +19,9 @@ public class Cell {
     /**
      * Lock for threads synchronization.
      */
+    @Builder.Default
     private final ReentrantLock lock = new ReentrantLock();
     private final Map<Type, Set<Organism>> residents;
-
-    public Cell(Map<Type, Set<Organism>> residents) {
-        this.residents = residents;
-    }
 
     public Map<Type, Set<Organism>> getResidents() {
         return residents;
