@@ -10,16 +10,16 @@ import org.javarush.oleksandr.island.abstraction.interfaces.GameObject;
 import org.javarush.oleksandr.island.entity.oraganism.Organism;
 
 @GameObjectEntity
-@Config(fileName = "config/entities/animals/herbivore/horse.yaml")
+@Config(fileName = "config/entities/animals/herbivore/rabbit.yaml")
 @NoArgsConstructor
 @SuperBuilder()
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-public class Horse extends Herbivore {
+public class Rabbit extends Herbivore {
 
     @Override
     public GameObject reproduce() {
-        return Horse.builder()
+        return Rabbit.builder()
                 .maxFood(this.getMaxFood())
                 .maxSpeed(this.getMaxSpeed())
                 .maxWeight(this.getMaxWeight())

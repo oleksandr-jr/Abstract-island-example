@@ -4,11 +4,12 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
-import org.javarush.oleksandr.island.annotations.Config;
-import org.javarush.oleksandr.island.annotations.GameObject;
+import org.javarush.oleksandr.island.abstraction.annotations.Config;
+import org.javarush.oleksandr.island.abstraction.annotations.GameObjectEntity;
+import org.javarush.oleksandr.island.abstraction.interfaces.GameObject;
 import org.javarush.oleksandr.island.entity.oraganism.Organism;
 
-@GameObject
+@GameObjectEntity
 @Config(fileName = "config/entities/animals/predator/wolf.yaml")
 @NoArgsConstructor
 @SuperBuilder
@@ -16,15 +17,11 @@ import org.javarush.oleksandr.island.entity.oraganism.Organism;
 @ToString(callSuper = true)
 public class Wolf extends Predator {
     @Override
-    public Organism reproduce() {
+    public Wolf reproduce() {
         return Wolf.builder()
                 .maxFood(this.getMaxFood())
                 .maxSpeed(this.getMaxSpeed())
-                .build();
-    }
-
-    private void privateTestMethod() {
-        System.out.println("Private Method");
+                .maxWeight(1).maxAmount(1).maxAge(1).isAlive(true).weight(1).health(1).age(1).build();
     }
 
 }

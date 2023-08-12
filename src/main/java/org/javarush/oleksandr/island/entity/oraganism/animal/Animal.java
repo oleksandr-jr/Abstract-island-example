@@ -1,12 +1,18 @@
 package org.javarush.oleksandr.island.entity.oraganism.animal;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
+import org.javarush.oleksandr.island.abstraction.interfaces.GameObject;
+import org.javarush.oleksandr.island.entity.map.Cell;
 import org.javarush.oleksandr.island.entity.oraganism.Movable;
 import org.javarush.oleksandr.island.entity.oraganism.Organism;
 
+import java.beans.Transient;
+import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 @NoArgsConstructor
 @SuperBuilder
@@ -24,16 +30,20 @@ public abstract class Animal implements Organism, Movable {
     @Builder.Default
     private final long UID = serialUID++;
 
+    @JsonIgnore
+    private Cell cell;
+
     private String icon;
     private int maxWeight;
     private int maxAmount;
     private int maxSpeed;
     private int maxFood;
+    private int maxAge; // TODO: add maxAge to config files
 
-    // TODO: implement this fields.
+    private boolean isAlive = true; // TODO: implement isAlive logic
     private int weight;
-    private int health;
-    private int age;
+    private int health;  // TODO: implement health logic
+    private int age; // TODO: implement age logic
 
     /**
      * This field is needed for storing target matrix for this organism.
@@ -42,8 +52,30 @@ public abstract class Animal implements Organism, Movable {
     @Builder.Default
     private Map<String, Integer> stringTargetMatrix = new HashMap<>();
     @Builder.Default
-    private Map<Class<? extends Organism>, Integer> targetMatrix = new HashMap<>();
+    private Map<Class<? extends GameObject>, Integer> targetMatrix = new HashMap<>(); // TODO: Implement target matrix
 
+    @Override
+    public void play() {
+        System.out.println("Animal play");
+        this.eat();
+        this.move();
+        this.reproduce();
+    }
+
+    public void eat() {
+
+    }
+
+    private void findFood() {
+        Class<? extends GameObject> target = targetMatrix.keySet().stream().skip(1).findFirst().get();
+
+
+        if (cell.getResidents().containsKey(target)) {
+
+        }
+
+        // TODO: implement find food logic;
+    }
 
     // TODO: implement animal move method.
     @Override

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>org.javarush.oleksandr.island.entity.map.Cell</OriginalElement>
+  <nodes>
+    <node x="-104.08305753737835" y="181.4024632101457">org.javarush.oleksandr.island.view.StatisticMonitor</node>
+    <node x="622.544495877923" y="448.44275196070373">org.javarush.oleksandr.island.abstraction.annotations.GameObjectEntity</node>
+    <node x="529.4100609756098" y="-62.48408251244609">org.javarush.oleksandr.island.entity.oraganism.Movable</node>
+    <node x="498.1600609756098" y="44.337694068367824">org.javarush.oleksandr.island.entity.oraganism.animal.Animal</node>
+    <node x="1092.5958623047143" y="-141.41255530566036">org.javarush.oleksandr.island.factory.GameObjectPrototypeFactory</node>
+    <node x="1124.5958623047143" y="-238.75246314711367">org.javarush.oleksandr.island.factory.PrototypeFactory</node>
+    <node x="1411.2818379144705" y="-238.75246314711367">org.javarush.oleksandr.island.exceptions.InitGameException</node>
+    <node x="-127.58305753737835" y="-113.36740140029033">org.javarush.oleksandr.island.engine.GameWorker</node>
+    <node x="395.8911522851222" y="124.05032864033174">org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Herbivore</node>
+    <node x="-104.08305753737835" y="44.337694068367824">org.javarush.oleksandr.island.Main</node>
+    <node x="808.1978394707239" y="124.05032864033174">org.javarush.oleksandr.island.entity.oraganism.plant.Plant</node>
+    <node x="458.3783343430573" y="453.94275196070373">org.javarush.oleksandr.island.abstraction.annotations.Config</node>
+    <node x="64.8824471143298" y="64.0">org.javarush.oleksandr.island.entity.map.GameField</node>
+    <node x="701.2404015265154" y="-371.10541651836854">org.javarush.oleksandr.island.entity.oraganism.Reproducible</node>
+    <node x="704.2404015265154" y="-293.10541651836854">org.javarush.oleksandr.island.abstraction.interfaces.GameObject</node>
+    <node x="622.544495877923" y="244.2848138214457">org.javarush.oleksandr.island.entity.oraganism.animal.predator.Wolf</node>
+    <node x="1627.2818379144705" y="-141.41255530566036">org.javarush.oleksandr.island.config.GameObjectsScanner</node>
+    <node x="1410.2818379144705" y="-146.91255530566036">org.javarush.oleksandr.island.config.PrototypeLoader</node>
+    <node x="476.3003629346769" y="244.2848138214457">org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Rabbit</node>
+    <node x="77.63409284753214" y="-113.36740140029033">org.javarush.oleksandr.island.entity.map.Cell</node>
+    <node x="1419.7818379144705" y="16.103362181893544">org.javarush.oleksandr.island.config.AppConfigurator</node>
+    <node x="800.6978394707238" y="244.2848138214457">org.javarush.oleksandr.island.entity.oraganism.plant.Cactus</node>
+    <node x="678.7404015265154" y="-62.48408251244609">org.javarush.oleksandr.island.entity.oraganism.Organism</node>
+    <node x="606.544495877923" y="124.05032864033174">org.javarush.oleksandr.island.entity.oraganism.animal.predator.Predator</node>
+    <node x="348.87066133839716" y="244.2848138214457">org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Horse</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Horse" target="org.javarush.oleksandr.island.abstraction.annotations.Config" relationship="REALIZATION">
+      <point x="3.38661602825141E-4" y="14.000186178554316" />
+      <point x="396.871" y="325.0" />
+      <point x="600.0" y="325.0" />
+      <point x="600.0" y="467.943" />
+      <point x="50.49966565694274" y="2.480392962525002E-4" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Rabbit" target="org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Herbivore" relationship="GENERALIZATION">
+      <point x="7.8335283893065935" y="-15.671533868079365" />
+      <point x="534.1338913239836" y="224.05032864033174" />
+      <point x="458.8911522851222" y="224.05032864033174" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.predator.Wolf" target="org.javarush.oleksandr.island.entity.oraganism.animal.predator.Predator" relationship="GENERALIZATION">
+      <point x="-3.3238334981747357" y="-16.173140760911167" />
+      <point x="661.7206623797483" y="151.55909943977986" />
+      <point x="-3.3238334981747357" y="13.508770799448115" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.plant.Cactus" target="org.javarush.oleksandr.island.entity.oraganism.plant.Plant" relationship="GENERALIZATION">
+      <point x="26.0" y="-14.0" />
+      <point x="878.6978394707238" y="257.19541696072395" />
+      <point x="852.6978394707239" y="257.19541696072395" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.factory.GameObjectPrototypeFactory" target="org.javarush.oleksandr.island.factory.PrototypeFactory" relationship="REALIZATION">
+      <point x="1.038682008138494" y="-11.030404681712668" />
+      <point x="1234.1345443128528" y="-206.49396826534291" />
+      <point x="1233.0958623047143" y="-206.49396826534291" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.engine.GameWorker" target="org.javarush.oleksandr.island.abstraction.interfaces.GameObject" relationship="TO_MANY">
+      <point x="0.0" y="-14.0" />
+      <point x="-52.08305753737835" y="-174.16230593163218" />
+      <point x="813.7404015265154" y="-174.16230593163218" />
+      <point x="36.5" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.plant.Plant" target="org.javarush.oleksandr.island.entity.oraganism.Organism" relationship="REALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="852.6978394707239" y="12.015917487553907" />
+      <point x="740.7404015265154" y="12.015917487553907" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.predator.Predator" target="org.javarush.oleksandr.island.entity.oraganism.animal.Animal" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="665.044495877923" y="110.33769406836782" />
+      <point x="557.6600609756098" y="110.33769406836782" />
+      <point x="0.0" y="19.5" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Horse" target="org.javarush.oleksandr.island.abstraction.annotations.GameObjectEntity" relationship="REALIZATION">
+      <point x="-14.999661338397175" y="14.000186178554316" />
+      <point x="381.871" y="299.0" />
+      <point x="726.044" y="299.0" />
+      <point x="-4.958779230719301E-4" y="-19.499751960703747" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.config.AppConfigurator" target="org.javarush.oleksandr.island.factory.GameObjectPrototypeFactory" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="1508.7818379144705" y="-66.91255530566036" />
+      <point x="1233.0958623047143" y="-66.91255530566036" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.Animal" target="org.javarush.oleksandr.island.entity.map.Cell" relationship="TO_ONE">
+      <point x="-59.500060975609756" y="7.662305931632176" />
+      <point x="258.5" y="71.5" />
+      <point x="258.5" y="40.0" />
+      <point x="117.134" y="40.0" />
+      <point x="-9.284753214444663E-5" y="14.000401400290329" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.Animal" target="org.javarush.oleksandr.island.entity.oraganism.Movable" relationship="REALIZATION">
+      <point x="29.75" y="-19.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.predator.Wolf" target="org.javarush.oleksandr.island.abstraction.annotations.GameObjectEntity" relationship="REALIZATION">
+      <point x="-4.958779230719301E-4" y="14.000186178554316" />
+      <point x="665.044" y="299.0" />
+      <point x="726.044" y="299.0" />
+      <point x="-4.958779230719301E-4" y="-19.499751960703747" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.Animal" target="org.javarush.oleksandr.island.entity.oraganism.Organism" relationship="REALIZATION">
+      <point x="29.75" y="-19.5" />
+      <point x="587.4100609756098" y="12.015917487553907" />
+      <point x="740.7404015265154" y="12.015917487553907" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Herbivore" target="org.javarush.oleksandr.island.entity.oraganism.animal.Animal" relationship="GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="458.8911522851222" y="110.33769406836782" />
+      <point x="557.6600609756098" y="110.33769406836782" />
+      <point x="0.0" y="19.5" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.map.GameField" target="org.javarush.oleksandr.island.entity.map.Cell" relationship="TO_MANY">
+      <point x="-4.471143298019342E-4" y="-14.0" />
+      <point x="130.882" y="40.0" />
+      <point x="117.134" y="40.0" />
+      <point x="-9.284753214444663E-5" y="14.000401400290329" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.config.PrototypeLoader" target="org.javarush.oleksandr.island.exceptions.InitGameException" relationship="CREATE">
+      <point x="0.0" y="-19.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.factory.GameObjectPrototypeFactory" target="org.javarush.oleksandr.island.abstraction.interfaces.GameObject" relationship="TO_MANY">
+      <point x="-70.25" y="-14.0" />
+      <point x="1162.8458623047143" y="-176.91255530566036" />
+      <point x="813.7404015265154" y="-176.91255530566036" />
+      <point x="36.5" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Rabbit" target="org.javarush.oleksandr.island.abstraction.annotations.Config" relationship="REALIZATION">
+      <point x="49.999637065322986" y="1.8617855431557473E-4" />
+      <point x="600.0" y="258.285" />
+      <point x="600.0" y="467.943" />
+      <point x="50.49966565694274" y="2.480392962525002E-4" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.Organism" target="org.javarush.oleksandr.island.abstraction.interfaces.GameObject" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="-36.5" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.config.AppConfigurator" target="org.javarush.oleksandr.island.config.PrototypeLoader" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="19.5" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.abstraction.interfaces.GameObject" target="org.javarush.oleksandr.island.entity.oraganism.Reproducible" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.0" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Rabbit" target="org.javarush.oleksandr.island.abstraction.annotations.GameObjectEntity" relationship="REALIZATION">
+      <point x="-3.6293467701398185E-4" y="14.000186178554316" />
+      <point x="526.3" y="299.0" />
+      <point x="726.044" y="299.0" />
+      <point x="-4.958779230719301E-4" y="-19.499751960703747" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.map.GameField" target="org.javarush.oleksandr.island.abstraction.annotations.Config" relationship="REALIZATION">
+      <point x="-3.992051794625695E-4" y="14.0" />
+      <point x="130.88204790915034" y="469.7639518998061" />
+      <point x="-52.14052670160282" y="1.821199939102371" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.predator.Wolf" target="org.javarush.oleksandr.island.abstraction.annotations.Config" relationship="REALIZATION">
+      <point x="-42.50049587792307" y="1.8617855431557473E-4" />
+      <point x="600.0" y="258.285" />
+      <point x="600.0" y="467.943" />
+      <point x="50.49966565694274" y="2.480392962525002E-4" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.plant.Cactus" target="org.javarush.oleksandr.island.abstraction.annotations.Config" relationship="REALIZATION">
+      <point x="1.605292761723831E-4" y="14.000186178554316" />
+      <point x="852.698" y="325.0" />
+      <point x="600.0" y="325.0" />
+      <point x="600.0" y="467.943" />
+      <point x="50.49966565694274" y="2.480392962525002E-4" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.plant.Cactus" target="org.javarush.oleksandr.island.abstraction.annotations.GameObjectEntity" relationship="REALIZATION">
+      <point x="-14.999839470723828" y="14.000186178554316" />
+      <point x="837.698" y="299.0" />
+      <point x="726.044" y="299.0" />
+      <point x="-4.958779230719301E-4" y="-19.499751960703747" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Horse" target="org.javarush.oleksandr.island.entity.oraganism.animal.herbivore.Herbivore" relationship="GENERALIZATION">
+      <point x="-24.0" y="-14.0" />
+      <point x="372.87066133839716" y="224.05032864033174" />
+      <point x="458.8911522851222" y="224.05032864033174" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.config.AppConfigurator" target="org.javarush.oleksandr.island.config.GameObjectsScanner" relationship="TO_ONE">
+      <point x="0.0" y="-14.0" />
+      <point x="1508.7818379144705" y="-66.91255530566036" />
+      <point x="1736.2818379144705" y="-66.91255530566036" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.Main" target="org.javarush.oleksandr.island.engine.GameWorker" relationship="CREATE">
+      <point x="0.0" y="-19.5" />
+      <point x="0.0" y="14.0" />
+    </edge>
+    <edge source="org.javarush.oleksandr.island.entity.map.GameField" target="org.javarush.oleksandr.island.entity.map.Cell" relationship="CREATE">
+      <point x="-28.748447114329807" y="-14.0" />
+      <point x="-15.000092847532144" y="14.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.660074122613684" showDependencies="true" x="795.2763030870774" y="201.0955556815967" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

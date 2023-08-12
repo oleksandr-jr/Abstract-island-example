@@ -1,7 +1,8 @@
 package org.javarush.oleksandr.island.config;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLMapper;
-import org.javarush.oleksandr.island.annotations.Config;
+import org.javarush.oleksandr.island.abstraction.annotations.Config;
 import org.javarush.oleksandr.island.exceptions.InitGameException;
 import org.jetbrains.annotations.NotNull;
 
@@ -14,7 +15,7 @@ import java.net.URL;
 public class PrototypeLoader {
 
     private static PrototypeLoader instance;
-
+    private final ObjectMapper objectMapper = new YAMLMapper();
     private PrototypeLoader() {
     }
 
@@ -45,11 +46,10 @@ public class PrototypeLoader {
     }
 
     private <T> T loadObject(@NotNull URL configFilePath, Class<T> type) {
-        YAMLMapper yamlMapper = new YAMLMapper();
-        T organism;
+        T gameObject;
 
         try {
-            organism = yamlMapper.readValue(configFilePath, type);
+            gameObject = objectMapper.readValue(configFilePath, type);
         } catch (IOException e) {
             String message = String.format("Cannot find config file %s for class %s",
                     configFilePath.getFile(),
@@ -57,6 +57,6 @@ public class PrototypeLoader {
             throw new InitGameException(message, e);
         }
 
-        return organism;
+        return gameObject;
     }
 }

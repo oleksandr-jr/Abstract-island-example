@@ -1,6 +1,6 @@
 package org.javarush.oleksandr.island.entity.map;
 
-import org.javarush.oleksandr.island.annotations.Config;
+import org.javarush.oleksandr.island.abstraction.annotations.Config;
 
 @Config(fileName = "config/entities/map/map.yaml")
 public class GameField {

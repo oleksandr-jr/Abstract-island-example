@@ -2,6 +2,7 @@ package org.javarush.oleksandr.island.entity.map;
 
 import lombok.Builder;
 import lombok.Getter;
+import org.javarush.oleksandr.island.abstraction.interfaces.GameObject;
 import org.javarush.oleksandr.island.entity.oraganism.Organism;
 
 import java.lang.reflect.Type;
@@ -21,9 +22,9 @@ public class Cell {
      */
     @Builder.Default
     private final ReentrantLock lock = new ReentrantLock();
-    private final Map<Type, Set<Organism>> residents;
+    private final Map<Type, Set<GameObject>> residents;
 
-    public Map<Type, Set<Organism>> getResidents() {
+    public Map<Type, Set<GameObject>> getResidents() {
         return residents;
     }
 }

@@ -1,6 +1,6 @@
 package org.javarush.oleksandr.island.config;
 
-import org.javarush.oleksandr.island.factory.OrganismPrototypeFactory;
+import org.javarush.oleksandr.island.factory.GameObjectPrototypeFactory;
 
 /**
  * This class is responsible for application configuration at the startup.
@@ -15,7 +15,7 @@ public class AppConfigurator {
     private static AppConfigurator instance;
     private final GameObjectsScanner gameObjectsScanner = GameObjectsScanner.getInstance();
     private final PrototypeLoader prototypeLoader = PrototypeLoader.getInstance();
-    private final OrganismPrototypeFactory organismFactory = OrganismPrototypeFactory.getInstance();
+    private final GameObjectPrototypeFactory gameObjectFactory = GameObjectPrototypeFactory.getInstance();
 
     private AppConfigurator() {
     }
@@ -42,7 +42,7 @@ public class AppConfigurator {
                 getAllGameObjectsClasses()
                 .stream()
                 .map(prototypeLoader::loadPrototype)
-                .forEach(organismFactory::registerPrototype);
+                .forEach(gameObjectFactory::registerPrototype);
     }
 
 }

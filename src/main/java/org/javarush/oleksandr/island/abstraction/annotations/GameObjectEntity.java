@@ -1,4 +1,4 @@
-package org.javarush.oleksandr.island.annotations;
+package org.javarush.oleksandr.island.abstraction.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,5 +7,5 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE})
-public @interface GameObject {
+public @interface GameObjectEntity {
 }
