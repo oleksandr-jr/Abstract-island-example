@@ -24,6 +24,7 @@ public class AppConfigurator {
         if (instance == null) {
             instance = new AppConfigurator();
         }
+
         return instance;
     }
 

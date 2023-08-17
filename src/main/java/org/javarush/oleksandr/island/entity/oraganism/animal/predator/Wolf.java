@@ -21,7 +21,14 @@ public class Wolf extends Predator {
         return Wolf.builder()
                 .maxFood(this.getMaxFood())
                 .maxSpeed(this.getMaxSpeed())
-                .maxWeight(1).maxAmount(1).maxAge(1).isAlive(true).weight(1).health(1).age(1).build();
+                .maxWeight(this.getMaxWeight())
+                .maxAmount(this.getMaxAmount())
+                .maxAge(1)
+                .age(1)
+                .health(1)
+                .isAlive(true)
+                .weight(1)
+                .build();
     }
 
 }

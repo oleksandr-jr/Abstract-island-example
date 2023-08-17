@@ -24,7 +24,4 @@ public class Cell {
     private final ReentrantLock lock = new ReentrantLock();
     private final Map<Type, Set<GameObject>> residents;
 
-    public Map<Type, Set<GameObject>> getResidents() {
-        return residents;
-    }
 }
