@@ -19,11 +19,7 @@ public class Wolf extends Predator {
     @Override
     public Wolf reproduce() {
         return Wolf.builder()
-                .maxFood(this.getMaxFood())
-                .maxSpeed(this.getMaxSpeed())
-                .maxWeight(this.getMaxWeight())
-                .maxAmount(this.getMaxAmount())
-                .maxAge(1)
+                .limits(getLimits())
                 .age(1)
                 .health(1)
                 .isAlive(true)

@@ -1,2 +1,3 @@
-maxWeight: 1
-maxAmount: 200
+limits :
+  maxWeight: 1
+  maxAmount: 200

@@ -1,5 +1,6 @@
 package org.javarush.oleksandr.island.config;
 
+import org.javarush.oleksandr.island.entity.map.GameMap;
 import org.javarush.oleksandr.island.factory.GameObjectPrototypeFactory;
 
 /**
@@ -16,6 +17,8 @@ public class AppConfigurator {
     private final GameObjectsScanner gameObjectsScanner = GameObjectsScanner.getInstance();
     private final PrototypeLoader prototypeLoader = PrototypeLoader.getInstance();
     private final GameObjectPrototypeFactory gameObjectFactory = GameObjectPrototypeFactory.getInstance();
+    private final GameMapGenerator gameMapGenerator = GameMapGenerator.getInstance();
+    private final CellGenerator cellGenerator = CellGenerator.getInstance();
 
     private AppConfigurator() {
     }
@@ -33,6 +36,7 @@ public class AppConfigurator {
      */
     public void init() {
         registerPrototypes();
+        GameMap.setInstance(generateGameMap());
         // TODO: implement gameField config loading.
         // TODO: implement gameField initialization with cells.
     }
@@ -44,6 +48,10 @@ public class AppConfigurator {
                 .stream()
                 .map(prototypeLoader::loadPrototype)
                 .forEach(gameObjectFactory::registerPrototype);
+    }
+
+    private GameMap generateGameMap() {
+       return gameMapGenerator.createGameMap();
     }
 
 }

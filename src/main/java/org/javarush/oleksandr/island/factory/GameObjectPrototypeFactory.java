@@ -2,6 +2,7 @@ package org.javarush.oleksandr.island.factory;
 
 import org.javarush.oleksandr.island.abstraction.interfaces.GameObject;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -34,6 +35,16 @@ public class GameObjectPrototypeFactory implements PrototypeFactory<GameObject> 
         }
 
         return prototypes.get(type).reproduce();
+    }
+
+    @Override
+    public Map<Class<? extends GameObject>, GameObject> getPrototypesMap() {
+        return prototypes;
+    }
+
+    @Override
+    public Collection<GameObject> getPrototypes() {
+        return prototypes.values();
     }
 
 }

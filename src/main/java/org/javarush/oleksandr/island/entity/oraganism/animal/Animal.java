@@ -4,12 +4,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import lombok.experimental.SuperBuilder;
 import org.javarush.oleksandr.island.abstraction.interfaces.GameObject;
+import org.javarush.oleksandr.island.entity.Limits;
 import org.javarush.oleksandr.island.entity.map.Cell;
 import org.javarush.oleksandr.island.entity.oraganism.Movable;
 import org.javarush.oleksandr.island.entity.oraganism.Organism;
+import org.javarush.oleksandr.island.utils.Probably;
 
-import java.beans.Transient;
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -28,17 +28,14 @@ public abstract class Animal implements Organism, Movable {
      * Annotation @Builder.Default is needed for excluding this field from builder.
      */
     @Builder.Default
-    private final long UID = serialUID++;
+    private long UID = serialUID++;
 
     @JsonIgnore
     private Cell cell;
 
     private String icon;
-    private int maxWeight;
-    private int maxAmount;
-    private int maxSpeed;
-    private int maxFood;
-    private int maxAge; // TODO: add maxAge to config files
+
+    private Limits limits;
 
     private boolean isAlive = true; // TODO: implement isAlive logic
     private int weight;
@@ -54,6 +51,17 @@ public abstract class Animal implements Organism, Movable {
     @Builder.Default
     private Map<Class<? extends GameObject>, Integer> targetMatrix = new HashMap<>(); // TODO: Implement target matrix
 
+
+    public Animal(String icon, Limits limits, boolean isAlive, int weight, int health, int age) {
+        this.UID = serialUID++;
+        this.icon = icon;
+        this.limits = limits;
+        this.isAlive = isAlive;
+        this.weight = weight;
+        this.health = health;
+        this.age = age;
+    }
+
     @Override
     public void play() {
         System.out.println("Animal play");
@@ -67,15 +75,22 @@ public abstract class Animal implements Organism, Movable {
     }
 
     private void findFood() {
-        Class<? extends GameObject> target = targetMatrix.keySet().stream().skip(1).findFirst().get();
 
+        Set<Class<? extends GameObject>> possibleTargets = targetMatrix.keySet();
+        int random = Probably.randomInt(0, possibleTargets.size());
 
-        if (cell.getResidents().containsKey(target)) {
+        possibleTargets.stream().skip(random).findFirst().ifPresent(TypeOfTargetToHunt -> {
+            cell.getResidents().computeIfPresent(TypeOfTargetToHunt, (key, value) -> {
+                value.stream().skip(Probably.randomInt(0, value.size())).findFirst().ifPresent(target -> {
+                    // kill target
+                });
+                return value;
+            });
 
-        }
-
-        // TODO: implement find food logic;
+            // TODO: implement find food logic;
+        });
     }
+
 
     // TODO: implement animal move method.
     @Override

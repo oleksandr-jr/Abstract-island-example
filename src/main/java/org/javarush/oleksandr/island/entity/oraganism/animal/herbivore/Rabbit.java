@@ -20,12 +20,7 @@ public class Rabbit extends Herbivore {
     @Override
     public GameObject reproduce() {
         return Rabbit.builder()
-                .maxFood(this.getMaxFood())
-                .maxSpeed(this.getMaxSpeed())
-                .maxWeight(this.getMaxWeight())
-                .maxAmount(this.getMaxAmount())
-                .maxAge(16)
-                .weight(this.getMaxWeight()) // TODO: Randomize weight
+                .limits(getLimits())
                 .health(100) // TODO: Add max health implementation
                 .age(0)
                 .isAlive(true)
